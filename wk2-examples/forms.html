@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <h1>HTML Forms</h1>
+    <!-- All stuff that belongs to forms - including submit buttons - go inside a FORM element. -->
+    <!-- 
+      There is a method attribute (GET by default). This sets how form
+      data will be submitted.
+      
+      - "get": GET forms (the default if the method attribute is not set) submit the data 
+               via the URL. This is usually used for simple search
+               forms where it doesn't matter if the data is visible in the URL. Searches are
+               not secure data so this doesn't matter. It's also useful to be able to bookmark
+               a search page. Since GET forms pass data via the URL, there is a character limit on
+               GET form data.
+      - "post": POST forms do NOT submit via the URL, so this is inherently more secure (i.e. the
+                data is not immediately exposed). Most forms should use POST as the submission
+                method. Wherever there is more sensitive data, use POST (e.g. a login form or 
+                checkout form).
+    -->
+    <!--
+      There is an action attribute. This value is the destination (URI/URL) where the form data
+      will be submitted to. As we're not doing any server-side form processing in this class, you
+      can omit this attribute for this class, but it's important to know about this attribute.
+    -->
+    <h2>Search form example</h2>
+    <form method="get">
+      <label for="search">Search:</label>
+      <input type="text" id="search" name="q" placeholder="e.g of red sox"><!--input is self closing tag-->
+      <button type="submit">Search now</button>
+    </form>
+
+    <h2>Login form example</h2>
+    <form method="post">
+      <label for="u">username</label>
+      <input type="text" id="u" name="user" placeholder="Jhondoe">
+      <label for="pw">password</label>
+      <input type="password" id="pw" name="pass" placeholder="**********">
+      <button type ="submit">log in</button>
+    </form>
+    
+
+    <h2>Random form example</h2>
+    <p>The following is just a form used to test out a few form fields.</p>
+    <form method="post">
+      <div>
+        <label for="household">number of people in household</label>
+        <input type="number" id ="household" name ="household" value="1" min="1"> 
+      </div>
+      <div>
+        <label for ="phone">phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="(666)666-6666" required>
+      </div>
+      <div>
+        <label for="email">email</label>
+        <input type="email" id="email" name="email" placeholder="abc.xyz@email.com">
+      </div>
+      <input type="hidden" name="my_hidden_field" value="Random">
+      <div>
+        <input type="checkbox" id="subsribe" name="subsribe" value="subsribe">
+        <label for="subsribe">subscribe to our news letter</label>
+        <fieldset>
+          <legend>select the news letter topis you are interested in</legend>
+          <input type="checkbox" id="art" name="interests" value="art">
+          <label for="art"> art</label>
+          <input type="checkbox" id="wood" name="interests" value="wood">
+          <label for="wood"> woodwork</label>
+          <input type="checkbox" id="garden" name="interests" value="garden">
+          <label for="garden"> gardeining</label>
+        </fieldset>
+        <fieldset>
+          <legend>select your age group</legend>
+          <input type="radio" id="twenties" name="age" value="twenties">
+          <label for="twenties">20-29</label>
+          <input type="radio" id="thirties" name="age" value="thirties">
+          <label for="thirties">30-39</label>
+        </fieldset>
+      </div>
+      <div>
+        <label for="reason">Reason for inquiry</label>
+        <select name="reason" id="reason">
+          <option disabled selected>--choose a reason</option>
+          <option value="sales">sales enquiry</option>
+          <option value="legal">legal enquiry</option>
+          <optgroup label="other enquiry">
+            <option value="media">media enquiry</option>
+            <option value="general">general enquiry</option>
+          </optgroup>
+        </select>
+      </div>
+      <div>
+        <label for="message">your message</label>
+        </div>
+        <div>
+        <textarea name="message" id="message" placeholder="your message here" rows="8" cols="70" ></textarea>
+      </div>
+      <div>
+        <button type="submit">submit</button>
+        <button type="reset">rese</button>
+
+      </div>
+    </form>
+    
+  </body>
+</html>

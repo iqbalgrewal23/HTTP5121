@@ -1,0 +1,123 @@
+/* Default styling for the page */
+body {
+    font-family: Arial, sans-serif; /* Default page font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text */
+}
+
+/* Heading font */
+h1, h2 {
+    font-family: Georgia, serif; /* Heading font */
+    color: #2c3e50; /* Dark blue for headings */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Link styling */
+a {
+    color: #3498db; /* Blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+/* Paragraph styling */
+p {
+    margin-bottom: 15px;
+}
+
+/* Code block styling */
+code {
+    font-family: "Courier New", monospace;
+    background-color: #ecf0f1; /* Light gray background */
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: #e74c3c; /* Red for code */
+}
+
+/* List styling */
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #bdc3c7; /* Light gray border */
+}
+
+#author {
+    background-color: #ecf0f1; /* Light gray background */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#comments {
+    background-color: #eaeaea; /* Slightly darker gray */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Form styling */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Wrapper for main content (optional) */
+#main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white; /* White background for main content */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}

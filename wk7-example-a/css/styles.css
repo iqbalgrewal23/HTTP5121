@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,900;1,900&family=Open+Sans:ital,wght@0,300;1,300&display=swap');
+
+/*************************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL/DEFAULT STYLES
+ * 2. HEADER
+ * -- 2a. Site name and logo
+ * -- 2b. Navigation
+ * 3. MAIN CONTENT
+ * -- 3a. Hero
+ * -- 3b. Other sections
+ * 4. FOOTER
+ * -- 4a. Navigation
+ *************************************************************/
+:root {
+  --accent:#E0376A;
+}
+/* 1. GENERAL/DEFAULT STYLES */
+html {
+  box-sizing:border-box;
+}
+*, *::before, *::after {
+  box-sizing:inherit;
+}
+body {
+  font:300 1em "Open Sans",sans-serif;
+  margin:0; /* remove default margin all around the body */
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family:"Lato",sans-serif;
+  font-weight:900;
+  text-transform:uppercase;
+}
+h2 {
+  font-size:1.5em; /* 24px */
+}
+h3 {
+  font-size:1.25em; /* 20px */
+}
+a:link, a:visited {
+  color:var(--accent);
+}
+a:hover {
+  text-decoration:none;
+}
+.content-wrapper {
+  padding:1.25em;
+  max-width:1300px; /* max-width allows for shrinking width but it just cannot exceed 1300px */
+  margin:0 auto; /* center a narrower block element within a wider parent */
+}
+.feature-text {
+  font-size:2em;
+}
+a.button, button {
+  display:inline-block;
+  background-color:#000;
+  color:#fff;
+  font-size:15px;
+  text-decoration:none;
+  font-family:"Open Sans",sans-serif;
+  padding:12px;
+  border-radius:10px;
+  min-width:153px;
+  text-align:center;
+}
+a.button:hover,
+button:hover {
+  background-color:var(--accent);
+}
+.pink-bg {
+  background-color: var(--accent);
+}
+.pink-bg a.button:hover,
+.pink-bg button:hover {
+  background-color:#000;
+  color:var(--accent);
+}
+
+/* 2. HEADER */
+#header {
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-between;
+  align-items:center;
+}
+#header a:link,
+#header a:visited {
+  text-decoration:none;
+  color:#000;
+  font-family:"Lato",sans-serif;
+  font-weight:900;
+}
+
+/* -- 2a. Site name and logo */
+#logo-and-site-name {
+  font-size:2em; /* 2em = 32px (desired size) / 16px */
+  margin: 0.5em 0; /* 36px gap - 20px (header padding) = 16px margin */
+}
+#logo::before {
+  content:"(^._.^)";
+  color:var(--accent);
+}
+
+/* -- 2b. Navigation */
+.menu {
+  display:flex;
+  list-style:none; /* remove bullet points */
+  column-gap:1.61em;
+}
+#main-navigation {
+  font-size:1.5em; /* 1.5em = 24px / 16px */
+  text-transform:uppercase;
+}
+#main-navigation a:hover {
+  color:var(--accent);
+}
+/* 3. MAIN CONTENT */
+
+/* -- 3a. Hero */
+.hero-wrapper {
+  background:linear-gradient(to right, #181817, #2c2a29);
+}
+.hero-text {
+  background:url("../images/black-cat-hero_1x.png") no-repeat center center;
+}
+.hero-text h1 {
+  color:#fff;
+  font-size: 6em; /* 6em = 96px / 16px */
+  text-shadow:5px 5px 0 var(--accent);
+  margin:1.0625em 0;
+}
+
+/* -- 3b. Other sections */
+#join-us-section, #learn-section {
+  text-align:center;
+}
+#learn-section h3 a:link {
+  color:#fff;
+  text-decoration:none;
+}
+.columns {
+  display:flex;
+  flex-flow:row wrap;
+  gap:20px;
+}
+.col {
+  flex:1 1 0;
+}
+/* 4. FOOTER */
+
+/* -- 4a. Navigation */
